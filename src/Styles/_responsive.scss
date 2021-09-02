@@ -127,6 +127,7 @@
       grid-template-rows: 350px;
       padding: 10px;
       .img-card {
+        height: 350px;
         .img-about {
           div {
             svg {
@@ -185,6 +186,37 @@
       height: 80px;
       p {
         font-size: 18px;
+      }
+    }
+  }
+}
+
+@include media(300px) {
+  .App {
+    .field {
+      .search-bar {
+        width: 440px;
+        height: 55px;
+        .input {
+          input {
+            font-size: 22px;
+          }
+        }
+        select {
+          font-size: 22px;
+        }
+        button {
+          font-size: 18px;
+        }
+      }
+    }
+    .content {
+      .img-card {
+        .tags {
+          p {
+            font-size: 12px;
+          }
+        }
       }
     }
   }
