@@ -26,6 +26,7 @@
       grid-template-rows: 400px;
       gap: 20px;
       .img-card {
+        height: 400px;
         .img-about {
           div {
             svg {
@@ -86,6 +87,11 @@
             font-size: 26px;
           }
         }
+      }
+    }
+    .footer {
+      p {
+        font-size: 20px;
       }
     }
   }
@@ -173,6 +179,12 @@
             font-size: 24px;
           }
         }
+      }
+    }
+    .footer {
+      height: 80px;
+      p {
+        font-size: 18px;
       }
     }
   }
