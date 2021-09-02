@@ -99,7 +99,7 @@ body {
     height: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 300px);
+    grid-template-rows: 300px;
     gap: 15px;
     .img-card {
       width: 100%;

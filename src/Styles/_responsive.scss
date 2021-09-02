@@ -23,7 +23,7 @@
     }
     .content {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(10, 400px);
+      grid-template-rows: 400px;
       gap: 20px;
       .img-card {
         .img-about {
@@ -118,7 +118,7 @@
     }
     .content {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(20, 350px);
+      grid-template-rows: 350px;
       padding: 10px;
       .img-card {
         .img-about {
