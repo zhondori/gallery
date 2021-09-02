@@ -1,0 +1,179 @@
+@include media(992px) {
+  .App {
+    .field {
+      height: 350px;
+      .title {
+        font-size: 34px;
+      }
+      .search-bar {
+        width: 470px;
+        height: 60px;
+        .input {
+          input {
+            font-size: 22px;
+          }
+        }
+        select {
+          font-size: 22px;
+        }
+        button {
+          font-size: 18px;
+        }
+      }
+    }
+    .content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(10, 400px);
+      gap: 20px;
+      .img-card {
+        .img-about {
+          div {
+            svg {
+              width: 26px;
+              height: 26px;
+            }
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+        .author {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .tags {
+          p {
+            font-size: 16px;
+            padding: 8px 10px;
+          }
+        }
+      }
+    }
+    .detail {
+      overflow-y: visible;
+      .back {
+        min-width: 200px;
+        top: 20px;
+        left: 10px;
+        padding: 15px 20px;
+        font-size: 18px;
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .img-block {
+        height: 80%;
+        padding: 20px;
+        .photo {
+          width: 100%;
+        }
+      }
+      .img-content {
+        height: 20%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 65px);
+        gap: 20px;
+        div {
+          svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+          }
+          span {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media(576px) {
+  .App {
+    .field {
+      height: 300px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      .title {
+        font-size: 34px;
+      }
+      .search-bar {
+        width: 370px;
+        height: 50px;
+        grid-template-columns: 45% 30% 25%;
+        .input {
+          input {
+            font-size: 18px;
+          }
+        }
+        select {
+          font-size: 20px;
+        }
+        button {
+          font-size: 16px;
+        }
+      }
+    }
+    .content {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(20, 350px);
+      padding: 10px;
+      .img-card {
+        .img-about {
+          div {
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+        .author {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .detail {
+      overflow-y: visible;
+      .back {
+        min-width: 150px;
+        top: 20px;
+        left: 10px;
+        padding: 10px 15px;
+        font-size: 16px;
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .img-block {
+        height: 60%;
+        padding: 20px;
+        .photo {
+          width: 100%;
+        }
+      }
+      .img-content {
+        height: 40%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 55px);
+        div {
+          svg {
+            width: 35px;
+            height: 35px;
+          }
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@mixin flex() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin media($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+        @content;
+    }
+}

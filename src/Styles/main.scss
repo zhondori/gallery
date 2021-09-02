@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./mixins";
+@import "./variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+.App {
+  width: 100%;
+  .field {
+    height: 250px;
+    width: 100%;
+    background: url("../Images/field-bg.jpg") center center no-repeat;
+    background-position-y: 25%;
+    background-size: cover;
+    @include flex;
+    flex-direction: column;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    .title {
+      font-size: 30px;
+      margin-bottom: 15px;
+      font-family: "Poppins", sans-serif;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, $d-blue, fuchsia, springgreen);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 3px 3px $white;
+    }
+    .search-bar {
+      width: 450px;
+      height: 45px;
+      display: grid;
+      grid-template-columns: 50% 30% 20%;
+      grid-template-rows: 100%;
+      border: 3px solid dodgerblue;
+      border-radius: 30px;
+      .input {
+        position: relative;
+        background: $white;
+        @include flex;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        .search-icon {
+          width: 20%;
+          height: 25px;
+          position: relative;
+          border-top-left-radius: 30px;
+          border-bottom-left-radius: 30px;
+          cursor: pointer;
+        }
+        input {
+          width: 80%;
+          height: 100%;
+          border: none;
+          outline: none;
+          font-size: 15px;
+          color: #333333;
+          font-weight: 500;
+        }
+      }
+      select {
+        border: none;
+        border-left: 2px solid dodgerblue;
+        border-right: 2px solid dodgerblue;
+        outline: none;
+        padding: 0 8px;
+        text-transform: capitalize;
+        font-size: 16px;
+      }
+      button {
+        border: none;
+        outline: none;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        cursor: pointer;
+        background: dodgerblue;
+        font-size: 15px;
+        color: $white;
+        font-weight: 500;
+        transition: 0.3s ease all;
+        &:hover {
+          transition: 0.3s ease all;
+          background: $white;
+          color: $dark;
+        }
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 300px);
+    gap: 15px;
+    .img-card {
+      width: 100%;
+      height: 100%;
+      background: #f1f1f1;
+      border-radius: 5px;
+      padding-bottom: 5px;
+      box-shadow: 0 5px 10px #dddddd;
+      a {
+        width: 100%;
+        height: 60%;
+        span {
+          width: 100%;
+          height: 60%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+        }
+      }
+      .tags {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        gap: 10px;
+        p {
+          padding: 5px 8px;
+          background: $d-blue;
+          border-radius: 300px;
+          color: $white;
+          font-size: 13px;
+        }
+      }
+      .img-about {
+        height: 15%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 0 5px;
+        div {
+          @include flex;
+          svg {
+            color: $dark;
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+            color: $d-blue;
+          }
+          span {
+            font-weight: 500;
+            color: $dark;
+            font-size: 14px;
+          }
+        }
+      }
+      .author {
+        display: flex;
+        align-items: center;
+        height: 15%;
+        padding: 0 5px;
+        border-top: 1px solid gray;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        img {
+          width: 33px;
+          height: 33px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+    }
+    .not-found {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  .detail {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+    .back {
+      position: absolute;
+      min-width: 200px;
+      top: 20px;
+      left: 20px;
+      padding: 15px 20px;
+      background: rgba($color: $white, $alpha: 0.7);
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $d-blue;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 18px;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .img-block {
+      width: 100%;
+      height: 85%;
+      background: #eeeeee;
+      @include flex;
+      padding: 15px 0;
+      .photo {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        padding: 20px;
+        background: lightblue;
+      }
+    }
+    .img-content {
+      height: 15%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 60px;
+      gap: 10px;
+      padding: 20px;
+      div {
+        display: flex;
+        background: rgba($color: lightskyblue, $alpha: .5);
+        align-items: center;
+        gap: 5px;
+        padding: 0 0 0 10px;
+        border-radius: 10px;
+        svg {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          stroke: $d-blue;
+        }
+        span {
+          font-weight: 700;
+          color: $dark;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@import "./responsive";
