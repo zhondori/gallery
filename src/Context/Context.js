@@ -8,7 +8,7 @@ export const Consumer = AppContext.Consumer;
 export default function Context(props) {
     const [data, setData] = useState({});
     useEffect(() => {
-        GetImage("mountain", "photo", setData, "&order=popular");
+        GetImage("", "photo", setData, "&order=popular");
     }, [])
     return (
         <Provider value={{
