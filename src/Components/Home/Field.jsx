@@ -18,8 +18,8 @@ const Field = () => {
                     </svg>
                     <input type="text" ref={inputRef} placeholder="Search Images" list="search"/>
                     <datalist id="search">
-                        {list.map(ls => (
-                            <option value={ls} />
+                        {list.map((ls, id) => (
+                            <option value={ls} key={id} />
                         ))}
                     </datalist>
                 </div>

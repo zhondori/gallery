@@ -15,8 +15,8 @@ const Card = ({ comments, downloads, likes, id, tags, user, views, userImageURL,
                 />
             </Link>
             <div className="tags">
-                {tagList.map(tag => (
-                    <p className={"tags__tag"}>{tag}</p>
+                {tagList.map((tag, id) => (
+                    <p className={"tags__tag"} key={id}>{tag}</p>
                 ))}
             </div>
             <div className="img-about">

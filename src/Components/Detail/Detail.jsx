@@ -1,16 +1,15 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../Context/Context";
 
 export default function Detail({ match }) {
-    const { data, GetImageById, setData } = useContext(AppContext);
-    const { id } = match.params;
-    const { hits } = data;
-    const { comments, downloads, likes, views, webformatURL } = hits["0"] !== undefined ? hits[0] : JSON.parse(localStorage.getItem("photo"));
-    useEffect(() => {
+    const { data, GetImageById, setData } = useContext(AppContext),
+        { id } = match.params,
+        { hits } = data,
+        { comments, downloads, likes, views, webformatURL } = hits ? hits[0] : JSON.parse(localStorage.photo)[0];
+    useLayoutEffect(() => {
         GetImageById(id, setData);
         localStorage.setItem("photo", JSON.stringify(hits));
-        console.log(JSON.parse(localStorage.getItem("photo")));
     }, [GetImageById, id, setData, hits]);
     return (
         <div className="detail">
